@@ -1,0 +1,18 @@
+/* responsive.css - Ajustements spécifiques selon les écrans */
+
+/* Mobile (moins de 576px) */
+@media (max-width: 575.98px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    .card-body {
+        padding: 1.5rem !important; /* Réduit le padding sur mobile */
+    }
+}
+
+/* Tablette (576px - 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stagiaires - Macrotech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">Macrotech</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Tableau de bord</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="stagiaires.html">Stagiaires</a></li>
+                        <li class="nav-item"><a class="nav-link" href="connexion.html">Connexion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+            <h2>Annuaire des Stagiaires</h2>
+            <a href="#" class="btn btn-primary">+ Ajouter un stagiaire</a>
+        </div>
+
+        <!-- Zone de filtres -->
+        <div class="row mb-4">
+            <div class="col-md-6 mb-3 mb-md-0">
+                <input type="text" id="search-input" class="form-control" placeholder="Rechercher par nom...">
+            </div>
+            <div class="col-md-3">
+                <select id="filter-statut" class="form-select">
+                    <option value="">Tous les statuts</option>
+                    <option value="En cours">En cours</option>
+                    <option value="Terminé">Terminé</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Conteneur de la grille -->
+        <div class="row g-4" id="stagiaires-container">
+            <!-- Carte statique pour le wireframe initial -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 card-hover">
+                    <div class="card-body">
+                        <h5 class="card-title">Dupont Jean</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Refonte Site Web</h6>
+                        <p class="card-text small">
+                            <strong>Période:</strong> 01/06/26 - 31/08/26<br>
+                            <span class="badge bg-primary mt-2">En cours</span>
+                        </p>
+                        <a href="#" class="btn btn-sm btn-outline-secondary w-100">Voir la fiche</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/data.js"></script>
+</body>
+</html>

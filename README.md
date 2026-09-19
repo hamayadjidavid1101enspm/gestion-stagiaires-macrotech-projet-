@@ -1,39 +1,34 @@
-# 🎓 Gestion des Stagiaires - Macrotech
+# Projet : Gestion des Stagiaires (Macrotech)
 
-[![Statut du projet](https://img.shields.io/badge/Statut-En%20développement%20(Phase%201)-blue.svg)]()
-[![Technologies](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20JS%20%7C%20Bootstrap-success.svg)]()
+Ce projet a été réalisé dans le cadre de mon stage chez Macrotech. L'objectif principal est de remplacer le suivi informel actuel (fichiers Excel, emails) par un véritable outil centralisé pour le suivi des stagiaires.
 
-## 📝 Description du projet
-**gestion-stagiaires-macrotech-projet** est une application web Frontend (côté client) conçue pour centraliser et fiabiliser le suivi interne des stagiaires au sein de l'entreprise Macrotech. 
+Ce dépôt correspond à la **Phase 1** du projet, qui se concentre uniquement sur la partie intégration et Front-end.
 
-Cette interface permet de répondre instantanément aux questions opérationnelles :
-- Qui est actuellement en stage ?
-- Sur quel(s) projet(s) travaillent-ils ?
-- Quel est l'état d'avancement de leurs travaux ?
+## Fonctionnalités implémentées
 
-*Ce projet correspond à la **Phase 1** du cahier des charges (Focus Frontend, Intégration et JavaScript Vanilla).*
+- Tableau de bord avec le résumé des effectifs et projets en cours
+- Formulaires de connexion et d'inscription (bascule gérée en JS)
+- Liste complète des stagiaires avec système de recherche et de filtre par statut
+- Fiche de détail pour chaque stagiaire
+- Formulaire d'ajout d'un stagiaire (avec contrôle et validation des dates en temps réel)
+- Vue "Projets" regroupant les équipes assignées
 
-## 🚀 Fonctionnalités (Jours 1 à 6)
-- **Tableau de bord (Dashboard) :** Vue d'ensemble avec statistiques clés (Stagiaires actifs, projets en cours).
-- **Authentification :** Interface de Connexion / Inscription avec bascule dynamique (JavaScript).
-- **Sécurité visuelle :** Masquage/Affichage du mot de passe en temps réel.
-- **Validation de formulaire :** Contrôle JS en temps réel de la correspondance des mots de passe.
-- **Annuaire des stagiaires :** Base de la liste des stagiaires avec barre de recherche et filtres.
+*Note technique : En l'absence de base de données pour cette première phase, la persistance des données lors de la navigation ou des rechargements de page est simulée via le `localStorage` du navigateur.*
 
-## 🛠️ Technologies & Outils
-- **HTML5 Sémantique** (Accessibilité et structure)
-- **CSS3 & Variables** (Architecture maintenable et micro-interactions)
-- **Bootstrap 5** (Système de grille et design responsive Mobile-First)
-- **JavaScript ES6+** (Manipulation du DOM et logique métier)
-- **Git / GitHub** (Versioning)
+## Stack technique
 
-## 📂 Architecture
-L'architecture respecte les standards professionnels de séparation des responsabilités (SoC) :
-```text
-gestion-stagiaires-macrotech-projet/
-├── index.html          # Point d'entrée (Tableau de bord)
-├── pages/              # Vues secondaires (Connexion, Stagiaires...)
-├── assets/
-│   ├── css/            # Styles globaux et responsifs
-│   └── js/             # Logique d'interface, validation et données (Mock)
-```
+- **HTML5** (Structure sémantique)
+- **CSS3** (Variables CSS, animations CSS, approche Mobile-First)
+- **Bootstrap 5** (Utilisation de la grille responsive et composants basiques)
+- **JavaScript Vanilla** (Manipulation du DOM, gestion d'événements, simulation de base de données)
+
+## Comment lancer le projet en local ?
+
+1. Clonez ce dépôt sur votre machine : 
+   `git clone https://github.com/hamayadjidavid1101enspm/gestion-stagiaires-macrotech-projet-.git`
+2. Ouvrez le dossier dans votre éditeur (ex: VS Code).
+3. Ouvrez le fichier `index.html` directement dans votre navigateur web, ou utilisez une extension comme *Live Server* pour un meilleur confort.
+
+## Évolutions prévues (Phase 2)
+
+Le travail futur consistera à basculer sur l'environnement Back-end (une branche dédiée a été préparée) pour connecter cette interface à une véritable base de données MySQL via PHP, et gérer les sessions de connexion de manière sécurisée.

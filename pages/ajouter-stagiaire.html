@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Stagiaire - Macrotech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body class="bg-light">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">Macrotech</a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Tableau de bord</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="stagiaires.html">Stagiaires</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="card shadow-sm border-0 mx-auto" style="max-width: 600px;">
+            <div class="card-header bg-white border-0 pt-4 px-4 d-flex align-items-center">
+                <a href="stagiaires.html" class="btn btn-outline-secondary btn-sm me-3"><i class="bi bi-arrow-left"></i></a>
+                <h3 class="mb-0">Nouveau Stagiaire</h3>
+            </div>
+            <div class="card-body p-4">
+                <form id="form-add-stagiaire">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Nom *</label>
+                            <input type="text" id="add-nom" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Prénom *</label>
+                            <input type="text" id="add-prenom" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email *</label>
+                        <input type="email" id="add-email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Projet Assigné *</label>
+                        <input type="text" id="add-projet" class="form-control" required>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Date de début *</label>
+                            <input type="date" id="add-debut" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Date de fin *</label>
+                            <input type="date" id="add-fin" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Statut *</label>
+                        <select id="add-statut" class="form-select" required>
+                            <option value="En cours">En cours</option>
+                            <option value="Terminé">Terminé</option>
+                        </select>
+                    </div>
+                    <div id="form-error" class="alert alert-danger d-none">La date de fin doit être postérieure à la date de début.</div>
+                    <button type="submit" class="btn btn-primary w-100"><i class="bi bi-save"></i> Enregistrer</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/add-stagiaire.js"></script>
+</body>
+</html>

@@ -1,4 +1,3 @@
-/* Déclaration des variables CSS */
 :root {
   --primary-color: #0d6efd;
   --secondary-color: #6c757d;
@@ -8,12 +7,11 @@
 }
 
 body {
-  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
   background-color: var(--bg-light);
   color: var(--text-dark);
 }
 
-/* Micro-interactions (Cahier des charges : animations au survol) */
 .card-hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -23,14 +21,12 @@ body {
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* Curseur pointer pour les icônes cliquables (ex: oeil du mot de passe) */
 .cursor-pointer {
   cursor: pointer;
 }
 
-/* Animations fade-in (Cahier des charges : Jour 11) */
 .fade-in {
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.4s ease-in;
 }
 
 @keyframes fadeIn {

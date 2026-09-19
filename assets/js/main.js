@@ -1,7 +1,4 @@
-// main.js - Gestion de l'interface utilisateur (UI)
-
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Bascule entre Connexion et Inscription
     const btnLogin = document.getElementById('btn-login');
     const btnRegister = document.getElementById('btn-register');
     const formLogin = document.getElementById('form-login');
@@ -23,21 +20,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Affichage / Masquage du mot de passe
-    const toggleButtons = document.querySelectorAll('.toggle-pwd');
+    const toggleBtns = document.querySelectorAll('.toggle-pwd');
     
-    toggleButtons.forEach(btn => {
+    toggleBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            const targetId = this.getAttribute('data-target');
-            const inputElement = document.getElementById(targetId);
-            const icon = this.querySelector('i');
+            let targetId = this.getAttribute('data-target');
+            let input = document.getElementById(targetId);
+            let icon = this.querySelector('i');
 
-            if (inputElement.type === 'password') {
-                inputElement.type = 'text';
+            if (input.type === 'password') {
+                input.type = 'text';
                 icon.classList.remove('bi-eye');
                 icon.classList.add('bi-eye-slash');
             } else {
-                inputElement.type = 'password';
+                input.type = 'password';
                 icon.classList.remove('bi-eye-slash');
                 icon.classList.add('bi-eye');
             }
